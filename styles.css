@@ -13,7 +13,6 @@ html, body{
 
 /* НИКАКОГО body::before здесь не используем */
 
-
 :root{
   --bg:#f7fafc;
   --text:#0f172a;
