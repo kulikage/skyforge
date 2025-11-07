@@ -158,3 +158,23 @@ a:hover{ text-decoration:underline }
   .grid-3, .grid-2{ grid-template-columns:1fr }
   .h1{ font-size:34px }
 }
+
+/* === FINAL BG LOCK (Variant A) — put this at the very bottom === */
+html, body { margin:0; padding:0; }
+
+body{
+  position: relative;
+  /* два слоя: градиент-подложка + фото; !important защищает от переопределений */
+  background:
+    radial-gradient(1200px 800px at 80% -10%, #e6f0ff 0%, #f8fafc 40%, #f1f5f9 100%),
+    url("assets/bg.webp") center / cover no-repeat fixed !important;
+}
+
+/* мягкая вуаль поверх фото */
+body::before{
+  content:"";
+  position: fixed; inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,.58), rgba(255,255,255,.28));
+}
