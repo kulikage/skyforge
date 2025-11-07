@@ -1,9 +1,42 @@
 (function(){
-  const form = document.getElementById('waitlist'); if(!form) return;
+  const form = document.getElementById('waitlist');
+  if(!form) return;
+
+  const ENDPOINT = 'https://script.google.com/macros/s/AKfycbwKUBYOqTEDmsc7rVGfKid9j0DAk70Q5B_NXyca3j8dwQoFYAqTbLobi2EnBH4wi0AK/exec'; // ← твой URL
+
   form.addEventListener('submit', async (e)=>{
     e.preventDefault();
     const msg = document.getElementById('waitlist-msg');
-    try{ await new Promise(r=>setTimeout(r,300)); msg.style.display='block'; msg.textContent='Thanks! You’re on the list.'; form.reset(); }
-    catch(_){ msg.style.display='block'; msg.textContent='Sorry, something went wrong.'; }
+    const email = form.email.value.trim();
+    const name  = (form.name?.value || '').trim();
+    msg.style.display = 'block';
+
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+      msg.textContent = 'Please enter a valid email.';
+      return;
+    }
+
+    msg.textContent = 'Submitting…';
+    try{
+      const body = new URLSearchParams({
+        email, name,
+        _gotcha: form.querySelector('[name="_gotcha"]').value || ''
+      });
+
+      const res = await fetch(ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type':'application/x-www-form-urlencoded' },
+        body
+      });
+
+      if(res.ok){
+        msg.textContent = 'Thanks! You’re on the list.';
+        form.reset();
+      } else {
+        msg.textContent = 'Server error. Please try again later.';
+      }
+    } catch(_){
+      msg.textContent = 'Network error. Please try again.';
+    }
   });
 })();
