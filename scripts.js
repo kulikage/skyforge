@@ -2,7 +2,7 @@
   const form = document.getElementById('waitlist');
   if(!form) return;
 
-  const ENDPOINT = 'https://script.google.com/macros/s/AKfycbwKUBYOqTEDmsc7rVGfKid9j0DAk70Q5B_NXyca3j8dwQoFYAqTbLobi2EnBH4wi0AK/exec'; // ← твой URL
+  const ENDPOINT = 'https://script.google.com/macros/s/AKfycbw3P7dtOJOpsHxl1Ph1BiUxL4qBHpotUyGzDZw72Ut83qq8kf3dMYseRy8wgbWftu8/exec'; // ← твой URL
 
   form.addEventListener('submit', async (e)=>{
     e.preventDefault();
