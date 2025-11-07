@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SkyForge — Restoring the Ozone Layer with Every Mile</title>
+  <meta name="description" content="SkyForge integrates atmospheric ozone technology into commercial aviation to accelerate stratospheric ozone restoration." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+  <script defer src="./scripts.js"></script>
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner container">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <a href="./" style="font-size:18px">SkyForge</a>
+      </div>
+      <nav style="display:flex;gap:16px">
+        <a href="./why-now.html">Why Now</a>
+        <a href="https://www.linkedin.com/company/skyforgeinc" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://x.com/skyforgezone" target="_blank" rel="noopener">X</a>
+        <a href="mailto:info@skyforge.zone">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <span class="pill">Public-benefit climate tech</span>
+      <h1 class="h1">Restoring the ozone layer with every mile</h1>
+      <p class="lead">
+        SkyForge is developing the world’s first atmospheric ozone technology integrated into aviation.
+        Our in‑flight generator delicately produces and injects O<sub>3</sub> in the lower stratosphere—right where it matters—
+        complementing natural recovery and strengthening our planet’s UV shield.
+      </p>
+      <div class="row" style="margin-top:24px">
+        <div class="card">
+          <form id="waitlist" action="#" method="post" data-mode="demo">
+            <label for="email" class="h3" style="margin-top:0">Join the waitlist</label>
+            <p class="note">We’ll notify you about milestones and pilot programs.</p>
+            <input class="input" type="email" id="email" name="email" placeholder="Email address" required />
+            <div style="display:flex;gap:10px;margin-top:12px">
+              <button class="btn primary" type="submit">Join</button>
+              <a class="btn" href="./why-now.html">Learn more</a>
+            </div>
+            <p id="waitlist-msg" class="note" style="margin-top:10px;display:none"></p>
+          </form>
+        </div>
+        <div class="hero-art card">
+          <div>
+            <div class="badge">Concept illustration</div>
+            <p style="margin:10px 0 0">Aircraft-mounted ozone generator → measured, localized O<sub>3</sub> injection in the lower stratosphere</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-3" style="margin-top:24px">
+        <div class="card kpi"><span class="num">95%+</span> <span class="sub">UV filtered by a healthy ozone layer</span></div>
+        <div class="card kpi"><span class="num">2060</span> <span class="sub">Projected natural recovery without new tech</span></div>
+        <div class="card kpi"><span class="num">Now</span> <span class="sub">SkyForge accelerates restoration</span></div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="grid-3">
+        <div class="card">
+          <h3 class="h3">Why it matters</h3>
+          <p>The ozone layer protects life by absorbing harmful UV‑B/UV‑C radiation. Faster restoration means fewer skin cancers, safer ecosystems, and better crop yields.</p>
+        </div>
+        <div class="card">
+          <h3 class="h3">How it works</h3>
+          <p>Our generator uses onboard power to create “good ozone” and inject it precisely along airline routes, augmenting natural O<sub>3</sub> formation in the lower stratosphere.</p>
+        </div>
+        <div class="card">
+          <h3 class="h3">Path to scale</h3>
+          <p>Deploy across tens of thousands of aircraft via retrofit and line‑fit partnerships. Instrument with sensing to monitor local O<sub>3</sub> and ensure safety.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="row">
+        <div class="card">
+          <h2 class="h2">Pilot program</h2>
+          <p>We’re preparing a limited pilot with partner airlines to validate efficiency, safety, and operations. If your organization is interested in collaborating, join the waitlist and note “pilot.”</p>
+          <a class="btn" href="mailto:info@skyforge.zone?subject=SkyForge%20Pilot">Partner with us</a>
+        </div>
+        <div class="card">
+          <h2 class="h2">Safety first</h2>
+          <p>Generation is “delicate by design,” targeting low‑ppm mixing and strict dispersion away from the cabin and ground‑level air. Controls, logging, and geofenced flight envelopes back this approach.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+      <div>© SkyForge Inc — Charlotte, NC</div>
+      <div style="display:flex;gap:12px">
+        <a href="./why-now.html">Why Now</a>
+        <a href="mailto:info@skyforge.zone">info@skyforge.zone</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
