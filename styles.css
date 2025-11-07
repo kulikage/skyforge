@@ -1,3 +1,14 @@
+/* --- FORCE BG DIAGNOSTIC --- */
+html, body { margin:0; padding:0; }
+body{
+  /* принудительно включаем фото на фоне */
+  background: url("assets/bg.webp") center / cover no-repeat fixed !important;
+  position: relative;
+}
+/* временно отключаем вуаль, чтобы точно увидеть фото */
+body::before{ content:none !important; }
+/* --- /FORCE BG DIAGNOSTIC --- */
+
 :root{
   --bg:#f7fafc;
   --text:#0f172a;
