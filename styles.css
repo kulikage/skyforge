@@ -62,6 +62,18 @@ a:hover{ text-decoration:underline }
   padding:14px 24px;
 }
 
+/* Icon buttons in the top nav */
+.nav a.icon-btn{
+  width:28px; height:28px;
+  display:inline-flex; align-items:center; justify-content:center;
+  border-radius:6px;
+}
+.nav a.icon-btn svg{ width:20px; height:20px; display:block; }
+
+/* фирменный синий */
+.nav a.icon-btn.linkedin{ color:#0A66C2; }
+.nav a.icon-btn.linkedin:hover{ filter:brightness(1.1); }
+
 .brand{ display:flex; align-items:center; gap:10px; font-weight:700 }
 .brand .logo{
   width:28px; height:28px; border-radius:8px;
