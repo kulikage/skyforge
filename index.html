@@ -37,16 +37,23 @@
   complementing natural recovery and strengthening our planet’s UV shield.</p>
   <div style="margin-top:24px;display:flex;justify-content:flex-start;gap:24px;">
     <div class="card hero-center">
-      <form id="waitlist" action="#" method="post" data-mode="demo">
-        <label for="email" class="h3" style="margin-top:0">Join the waitlist</label>
-        <p class="note">We’ll notify you about milestones and pilot programs.</p>
-        <input class="input" type="email" id="email" name="email" placeholder="Email address" required/>
-        <div style="display:flex;gap:10px;margin-top:12px">
-          <button class="btn primary" type="submit">Join</button>
-          <a class="btn" href="./why-now.html">Learn more</a>
-        </div>
-        <p id="waitlist-msg" class="note" style="margin-top:10px;display:none"></p>
-      </form>
+<form id="waitlist" action="#" method="post" novalidate>
+  <label for="email" class="h3" style="margin-top:0">Join the waitlist</label>
+  <p class="note">We’ll notify you about milestones and pilot programs.</p>
+
+  <input class="input" type="email" id="email" name="email" placeholder="Email address" required />
+  <input class="input" type="text"  id="name"  name="name"  placeholder="Name (optional)" style="margin-top:10px" />
+
+  <!-- honeypot -->
+  <input type="text" name="_gotcha" style="display:none">
+
+  <div style="display:flex;gap:10px;margin-top:12px">
+    <button class="btn primary" type="submit">Join</button>
+    <a class="btn" href="./why-now.html">Learn more</a>
+  </div>
+  <p id="waitlist-msg" class="note" style="margin-top:10px;display:none"></p>
+</form>
+
     </div>
   </div>
   <div class="grid-3" style="margin-top:24px">
